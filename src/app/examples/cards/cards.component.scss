@@ -1,0 +1,25 @@
+ul {
+  list-style-type: initial;
+  padding: inherit;
+  padding-top: 0;
+
+  li {
+    list-style-type: initial;
+  }
+}
+
+.list-bg {
+  background-color: #f5f2f0;
+  padding: 30px;
+
+  md-card:not(.title-group-demo) {
+    margin-bottom: 0;
+    min-height: 200px;
+    min-width: 300px;
+    max-width: 500px;
+    width: 75%;
+  }
+  md-card.title-group-demo {
+    width: 300px;
+  }
+}

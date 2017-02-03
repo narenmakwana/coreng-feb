@@ -1,0 +1,116 @@
+<md-card>
+  <md-card-title>badges</md-card-title>
+  <md-card-content>
+    <p><code>badges</code> can notify you that there are new or unread messages or notifications. Add the <code class="language-markup">new</code> class to the badge to give it the background.</p>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Collections</md-toolbar>
+  <md-card-content>
+    <div class="collection">
+      <a class="collection-item">Alan<span class="badge">1</span></a>
+      <a class="collection-item">Alan<span class="new badge">4</span></a>
+      <a class="collection-item">Alan</a>
+      <a class="collection-item">Alan<span class="badge">14</span></a>
+    </div>
+    <pre><code class="language-html">
+  &lt;div class="collection">
+    &lt;a class="collection-item">Alan&lt;span class="badge">1&lt;/span>&lt;/a>
+    &lt;a class="collection-item">Alan&lt;span class="new badge">4&lt;/span>&lt;/a>
+    &lt;a class="collection-item">Alan&lt;/a>
+    &lt;a class="collection-item">Alan&lt;span class="badge">14&lt;/span>&lt;/a>
+  &lt;/div>
+            </code></pre>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Badges in Dropdown</md-toolbar>
+  <md-card-content>
+    <ul id="dropdown2" class="dropdown-content">
+      <li><a>one<span class="badge">1</span></a></li>
+      <li><a>two<span class="new badge">1</span></a></li>
+      <li><a>three</a></li>
+    </ul>
+    <!--<a class="btn dropdown-button" materialize="dropdown" data-activates="dropdown2">Dropdown<i class="mdi-navigation-arrow-drop-down right"></i></a>-->
+
+    <pre><code class="language-markup">
+  &lt;ul id="dropdown2" class="dropdown-content">
+    &lt;li>&lt;a>one&lt;span class="badge">1&lt;/span>&lt;/a>&lt;/li>
+    &lt;li>&lt;a>two&lt;span class="new badge">1&lt;/span>&lt;/a>&lt;/li>
+    &lt;li>&lt;a>three&lt;/a>&lt;/li>
+  &lt;/ul>
+  &lt;a class="btn dropdown-button" data-activates="dropdown2">Dropdown&lt;i class="mdi-navigation-arrow-drop-down right">&lt;/i>&lt;/a>
+            </code></pre>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Badges in Navbar</md-toolbar>
+  <md-card-content>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="">sass</a></li>
+          <li><a href="">sass <span class="new badge">4</span></a></li>
+          <li><a href="">sass</a></li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+
+    <pre><code class="language-markup">
+&lt;nav>
+  &lt;div class="nav-wrapper">
+    &lt;a href="" class="brand-logo">Logo&lt;/a>
+    &lt;ul id="nav-mobile" class="right hide-on-med-and-down">
+      &lt;li>&lt;a href="">sass&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="">sass &lt;span class="new badge">4&lt;/span>&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="">sass&lt;/a>&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/nav></code></pre>
+  </md-card-content>
+</md-card>
+
+<!--<md-card class="card-toolbar">-->
+  <!--<md-toolbar color="primary">Options</md-toolbar>-->
+  <!--<md-card-content>-->
+    <!--<p class="caption">You can customize captions in many ways.</p>-->
+    <!--<c-row>-->
+    <!--<c-col [s]="12" [m]="3"><h5 class="light">Custom Caption</h5></c-col>-->
+    <!--<c-col [s]="12" [m]="9">-->
+      <!--<div class="collection">-->
+        <!--<a class="collection-item">Custom Badge Captions<span class="new badge" data-badge-caption="custom caption">4</span></a>-->
+        <!--<a class="collection-item">Custom Badge Captions<span class="badge" data-badge-caption="custom caption">4</span></a>-->
+      <!--</div>-->
+    <!--</c-col>-->
+    <!--<c-col [s]="12" [m]="9" [offsetMedium]="3">-->
+      <!--<p>You can explicitly set the caption in a badge using the <code class="language-markup">data-badge-caption</code> attribute.</p>-->
+      <!--<pre><code class="language-markup">-->
+  <!--&lt;span class="new badge" data-badge-caption="custom caption">4&lt;/span>-->
+  <!--&lt;span class="badge" data-badge-caption="custom caption">4&lt;/span>-->
+            <!--</code></pre>-->
+    <!--</c-col>-->
+    <!--</c-row>-->
+
+    <!--<c-row>-->
+      <!--<c-col [s]="12" [m]="3"><h5 class="light">Colors</h5></c-col>-->
+      <!--<c-col [s]="12" [m]="9">-->
+        <!--<div class="collection">-->
+          <!--<a class="collection-item">Red<span class="new badge red" data-badge-caption="red">4</span></a>-->
+          <!--<a class="collection-item">Blue<span class="new badge blue" data-badge-caption="blue">4</span></a>-->
+        <!--</div>-->
+      <!--</c-col>-->
+      <!--<c-col [s]="12" [m]="9" [offsetMedium]="3">-->
+        <!--<p>You can use our color classes to set the background-color of the badge.</p>-->
+        <!--<pre><code class="language-markup">-->
+  <!--&lt;span class="new badge red">4&lt;/span>-->
+  <!--&lt;span class="new badge blue">4&lt;/span>-->
+            <!--</code></pre>-->
+      <!--</c-col>-->
+    <!--</c-row>-->
+  <!--</md-card-content>-->
+<!--</md-card>-->

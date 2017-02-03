@@ -1,0 +1,223 @@
+<md-card>
+  <md-card-title>md-list</md-card-title>
+  <md-card-content>
+    <p><code>md-list</code> is a container component that wraps and formats a series of line items. As the base list component,<br/>
+      it provides Material Design styling, but no behavior of its own.</p>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Simple list</md-toolbar>
+  <md-card-content>
+    <p>In your template, create an <code>md-list</code> element and wrap each of your items in an <code>md-list-item</code> tag.</p>
+    <pre><code class="language-markup">&lt;md-list&gt;
+   &lt;md-list-item&gt; Pepper &lt;/md-list-item&gt;
+   &lt;md-list-item&gt; Salt &lt;/md-list-item&gt;
+   &lt;md-list-item&gt; Paprika &lt;/md-list-item&gt;
+&lt;/md-list&gt;</code></pre>
+    <br/>
+    <p>Output:</p>
+    <div class="flex-container layout-row justify-space list-bg">
+      <md-card>
+        <md-card-content>
+          <md-list class="list-padding">
+            <md-list-item> Pepper</md-list-item>
+            <md-list-item> Salt</md-list-item>
+            <md-list-item> Paprika</md-list-item>
+          </md-list>
+        </md-card-content>
+      </md-card>
+    </div>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Multi-line lists</md-toolbar>
+  <md-card-content>
+    <p>If your list requires multiple lines per list item, annotate each line with an <code>md-line</code> attribute.<br/>
+      You can use whichever heading tag is appropriate for your DOM hierarchy (doesn’t have to be <code>h3</code>),<br/>
+      as long as the <code>md-line</code> attribute is included.</p>
+    <pre><code class="language-markup" ngNonBindable>&lt;!-- two line list --&gt;
+&lt;md-list&gt;
+  &lt;md-list-item *ngFor=&quot;let message of messages&quot;&gt;
+    &lt;h3 md-line&gt; {{message.from}} &lt;/h3&gt;
+    &lt;p md-line&gt;
+      &lt;span&gt; {{message.subject}} &lt;/span&gt;
+      &lt;span class=&quot;demo-2&quot;&gt; -- {{message.message}} &lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/md-list-item&gt;
+&lt;/md-list&gt;
+
+&lt;!-- three line list --&gt;
+&lt;md-list&gt;
+  &lt;md-list-item *ngFor=&quot;let message of messages&quot;&gt;
+    &lt;h3 md-line&gt; {{message.from}} &lt;/h3&gt;
+    &lt;p md-line&gt; {{message.subject}} &lt;/p&gt;
+    &lt;p md-line class=&quot;demo-2&quot;&gt; {{message.message}} &lt;/p&gt;
+  &lt;/md-list-item&gt;
+&lt;/md-list&gt;</code></pre>
+    <br/>
+    <p>Two Line List Output:</p>
+    <div class="flex-container layout-row justify-space list-bg">
+      <md-card>
+        <md-list>
+          <md-list-item *ngFor="let message of messages">
+            <h3 md-line> {{message.from}} </h3>
+            <p md-line>
+              <span> {{message.subject}} </span>
+              <span class="demo-2"> -- {{message.message}} </span>
+            </p>
+          </md-list-item>
+        </md-list>
+      </md-card>
+    </div>
+
+    <p>Three Line List Output:</p>
+    <div class="flex-container layout-row justify-space list-bg">
+      <md-card>
+        <md-list>
+          <md-list-item *ngFor="let message of messages">
+            <h3 md-line> {{message.from}} </h3>
+            <p md-line> {{message.subject}} </p>
+            <p md-line class="demo-2"> {{message.message}} </p>
+          </md-list-item>
+        </md-list>
+      </md-card>
+    </div>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Lists with avatars</md-toolbar>
+  <md-card-content>
+    <p>To include an avatar, add an image tag with an <code>md-list-avatar</code> attribute.</p>
+    <pre><code class="language-markup" ngNonBindable>&lt;md-list&gt;
+  &lt;md-list-item *ngFor=&quot;let message of messages&quot;&gt;
+    &lt;img md-list-avatar [src]=&quot;message.avatarUrl&quot;&gt;
+    &lt;h3 md-line&gt; {{message.from}} &lt;/h3&gt;
+    &lt;p md-line&gt;
+      &lt;span&gt; {{message.subject}} &lt;/span&gt;
+      &lt;span class=&quot;detail-message&quot;&gt; -- {{message.message}} &lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/md-list-item&gt;
+&lt;/md-list&gt;</code></pre>
+    <br/>
+    <p>Output:</p>
+    <div class="flex-container layout-row justify-space list-bg">
+      <md-card>
+        <md-list>
+          <md-list-item *ngFor="let message of messages">
+            <img md-list-avatar [src]="message.avatarUrl">
+            <h3 md-line> {{message.from}} </h3>
+            <p md-line>
+              <span> {{message.subject}} </span>
+              <span class="detail-message"> -- {{message.message}} </span>
+            </p>
+          </md-list-item>
+        </md-list>
+      </md-card>
+    </div>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Dense lists</md-toolbar>
+  <md-card-content>
+    <p>Lists are also available in “dense layout” mode, which shrinks the font size and height of the list<br/>
+      to suit UIs that may need to display more information. To enable this mode, add a <code>dense</code> attribute<br/>
+      to the main <code>md-list</code> tag.</p>
+    <pre><code class="language-markup">&lt;md-list dense&gt;
+   &lt;md-list-item&gt; Pepper &lt;/md-list-item&gt;
+   &lt;md-list-item&gt; Salt &lt;/md-list-item&gt;
+   &lt;md-list-item&gt; Paprika &lt;/md-list-item&gt;
+&lt;/md-list&gt;</code></pre>
+    <br/>
+    <p>Output:</p>
+    <div class="flex-container layout-row justify-space list-bg">
+      <md-card>
+        <md-card-content>
+          <md-list dense>
+            <md-list-item> Pepper</md-list-item>
+            <md-list-item> Salt</md-list-item>
+            <md-list-item> Paprika</md-list-item>
+          </md-list>
+        </md-card-content>
+      </md-card>
+    </div>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Lists with multiple sections</md-toolbar>
+  <md-card-content>
+    <p>You can add a subheader to a list by annotating a heading tag with an <code>md-subheader</code> attribute. To add a divider,<br/>
+      use <code>&lt;md-divider&gt;</code> tags.</p>
+    <pre><code class="language-markup" ngNonBindable>&lt;md-list&gt;
+   &lt;h3 md-subheader&gt;Folders&lt;/h3&gt;
+   &lt;md-list-item *ngFor=&quot;let folder of folders&quot;&gt;
+      &lt;md-icon md-list-avatar&gt;folder&lt;/md-icon&gt;
+      &lt;h4 md-line&gt;{{folder.name}}&lt;/h4&gt;
+      &lt;p md-line class=&quot;detail-message&quot;&gt; {{folder.updated}} &lt;/p&gt;
+   &lt;/md-list-item&gt;
+   &lt;md-divider&gt;&lt;/md-divider&gt;
+   &lt;h3 md-subheader&gt;Notes&lt;/h3&gt;
+   &lt;md-list-item *ngFor=&quot;let note of notes&quot;&gt;
+      &lt;md-icon md-list-avatar&gt;note&lt;/md-icon&gt;
+      &lt;h4 md-line&gt;{{note.name}}&lt;/h4&gt;
+      &lt;p md-line class=&quot;detail-message&quot;&gt; {{note.updated}} &lt;/p&gt;
+   &lt;/md-list-item&gt;
+&lt;/md-list&gt;</code></pre>
+    <br/>
+    <p>Output:</p>
+    <div class="flex-container layout-row justify-space list-bg">
+      <md-card>
+        <md-card-content>
+          <md-list>
+            <h3 md-subheader>Folders</h3>
+            <md-list-item *ngFor="let folder of folders">
+              <md-icon md-list-avatar>folder</md-icon>
+              <h4 md-line>{{folder.name}}</h4>
+              <p md-line class="detail-message"> {{folder.updated}} </p>
+            </md-list-item>
+            <md-divider></md-divider>
+            <h3 md-subheader>Notes</h3>
+            <md-list-item *ngFor="let note of notes">
+              <md-icon md-list-avatar>note</md-icon>
+              <h4 md-line>{{note.name}}</h4>
+              <p md-line class="detail-message"> {{note.updated}} </p>
+            </md-list-item>
+          </md-list>
+        </md-card-content>
+      </md-card>
+    </div>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Navigation lists</md-toolbar>
+  <md-card-content>
+    <p>Use <code>md-nav-list</code> tags for navigation lists (i.e. lists that have anchor tags).</p>
+    <p>Simple nav lists can tack an <code>md-list-item</code> attribute onto the anchor tag itself:</p>
+    <pre><code class="language-markup" ngNonBindable>&lt;md-nav-list&gt;
+   &lt;a md-list-item href=&quot;...&quot; *ngFor=&quot;let link of links&quot;&gt; {{ link }} &lt;/a&gt;
+&lt;/md-nav-list&gt;</code></pre>
+    <p>If you require a more complex nav list (e.g. with more than one target per item), wrap your anchor tag in an <code>md-list-item</code> element.</p>
+    <pre><code class="language-markup">&lt;md-nav-list&gt;
+  &lt;md-list-item *ngFor=&quot;let link of links&quot;&gt;
+     &lt;a md-line href=&quot;...&quot;&gt;{{ link }}&lt;/a&gt;
+     &lt;button md-icon-button (click)=&quot;showInfo(link)&quot;&gt;
+        &lt;md-icon&gt;info&lt;/md-icon&gt;
+     &lt;/button&gt;
+  &lt;/md-list-item&gt;
+&lt;/md-nav-list&gt;</code></pre>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Lists with secondary text</md-toolbar>
+  <md-card-content>
+    <p>Secondary text styling will be part of a broader typography module to
+      <a href="https://github.com/angular/material2/issues/205">come later</a>, and won’t be implemented as part of this component
+      specifically. Gray text in the examples above comes from a “demo-2” class added manually by the demo.</p>
+  </md-card-content>
+</md-card>

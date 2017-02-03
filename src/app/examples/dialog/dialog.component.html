@@ -1,0 +1,106 @@
+<md-card>
+  <md-card-title>MdDialog</md-card-title>
+  <md-card-content>
+    <p>MdDialog is a service, which opens dialogs components in the view.
+    <p>Example:</p>
+    <div>
+      <button md-raised-button (click)="open()">Open Sample Dialog</button>
+    </div>
+    <br/>
+    <strong>Previous Dialog Result:</strong>
+    <pre><code class="language-json" cCode>{{results}}</code></pre>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Methods</md-toolbar>
+  <md-card-content>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code class="language-javascript" cCode>open(component: ComponentType&lt;T&gt;, config: MdDialogConfig): MdDialogRef&lt;T&gt;</code></td>
+        <td>Creates and opens a dialog matching material spec.</td>
+      </tr>
+      <tr>
+        <td><code class="language-javascript" cCode>closeAll(): void</code></td>
+        <td>Closes all of the dialogs that are currently open.</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Config</md-toolbar>
+  <md-card-content>
+    <table>
+      <thead>
+      <tr>
+        <th>Key</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code class="language-javascript" cCode>role: DialogRole = 'dialog'</code></td>
+        <td>The ARIA role of the dialog element. Possible values are <code>dialog</code> and <code>alertdialog</code>. Optional.</td>
+      </tr>
+      <tr>
+        <td><code class="language-javascript" cCode>disableClose: boolean = false</code></td>
+        <td>Whether to prevent the user from closing a dialog by clicking on the backdrop or pressing escape. Optional.</td>
+      </tr>
+      <tr>
+        <td><code class="language-javascript" cCode>width: string = ''</code></td>
+        <td>Width of the dialog. Takes any valid CSS value. Optional.</td>
+      </tr>
+      <tr>
+        <td><code class="language-javascript" cCode>height: string = ''</code></td>
+        <td>Height of the dialog. Takes any valid CSS value. Optional.</td>
+      </tr>
+      <tr>
+        <td><code class="language-javascript" cCode>position: {{'{'}} top?: string, bottom?: string, left?: string, right?: string }</code></td>
+        <td>Position of the dialog that overrides the default centering in it’s axis. Optional.</td>
+      </tr>
+      <tr>
+        <td><code class="language-javascript" cCode>viewContainerRef: ViewContainerRef</code></td>
+        <td>The view container ref to attach the dialog to. Optional.</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">MdDialogRef</md-toolbar>
+  <md-card-content>
+    <p>A reference to the dialog created by the MdDialog <code>open</code> method.</p>
+    <pre><code class="language-javascript" cCode>this._dialogRef = this._dialog.open(SampleDialogComponent);</code></pre>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code class="language-javascript" cCode>close(dialogResult?: any)</code></td>
+        <td>Closes the dialog, pushing a value to the afterClosed observable.</td>
+      </tr>
+      <tr>
+        <td><code class="language-javascript" cCode>afterClosed(): Observable&lt;any&gt;</code></td>
+        <td>Returns an observable which will emit the dialog result, passed to the <code>close</code> method above.</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>
+
+
+

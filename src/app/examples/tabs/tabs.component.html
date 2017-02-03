@@ -1,0 +1,108 @@
+<md-card>
+  <md-card-title>md-tab-group</md-card-title>
+  <md-card-content>
+    <p><code>md-tab-group</code>'s allow the user to organize their content by labels such that only one tab is visible at any given time.</p>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Properties</md-toolbar>
+  <md-card-content>
+    <table>
+      <thead>
+      <tr class="header">
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+        <td><code>selectedIndex</code></td>
+        <td><code>number</code></td>
+        <td>The index of the currently active tab.</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Events</md-toolbar>
+  <md-card-content>
+    <table>
+      <thead>
+      <tr class="header">
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+        <td><code>focusChange</code></td>
+        <td><code>Event</code></td>
+        <td>Fired when focus changes from one label to another</td>
+      </tr>
+      <tr class="even">
+        <td><code>selectChange</code></td>
+        <td><code>Event</code></td>
+        <td>Fired when the selected tab changes</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Examples</md-toolbar>
+  <md-card-content>
+    <p>A basic tab group would have the following markup.</p>
+    <pre><code class="language-markup">&lt;md-tab-group&gt;
+  &lt;md-tab&gt;
+    &lt;template md-tab-label&gt;One&lt;/template&gt;
+    &lt;template md-tab-content&gt;
+      &lt;h1&gt;Some tab content&lt;/h1&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/template&gt;
+  &lt;/md-tab&gt;
+  &lt;md-tab&gt;
+    &lt;template md-tab-label&gt;Two&lt;/template&gt;
+    &lt;template md-tab-content&gt;
+      &lt;h1&gt;Some more tab content&lt;/h1&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/template&gt;
+  &lt;/md-tab&gt;
+&lt;/md-tab-group&gt;</code></pre>
+    <p>Output:</p>
+    <div class="flex-container layout-row justify-space tabs-bg">
+      <md-card>
+        <md-card-content>
+          <md-tab-group>
+            <md-tab>
+              <template md-tab-label>One</template>
+              <template md-tab-content>
+                <h4>Some tab content</h4>
+                <p>...</p>
+              </template>
+            </md-tab>
+            <md-tab>
+              <template md-tab-label>Two</template>
+              <template md-tab-content>
+                <h4>Some more tab content</h4>
+                <p>...</p>
+              </template>
+            </md-tab>
+          </md-tab-group>
+        </md-card-content>
+      </md-card>
+    </div>
+    <p>It is also possible to specify the active tab by using the <code>selectedIndex</code> property.</p>
+    <pre><code class="language-markup">&lt;md-tab-group [selectedIndex]=&quot;1&quot;&gt;
+  ...
+&lt;/md-tab-group&gt;</code></pre>
+    <p><strong>Note</strong>: The index always starts counting from <code>zero</code>.</p>
+  </md-card-content>
+</md-card>
+
+

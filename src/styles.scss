@@ -1,0 +1,36 @@
+@import "assets/scss/_variables.scss";
+@import "assets/scss/_colors.scss";
+//@import "assets/scss/_materialize-css.scss";
+@import "assets/scss/_flex.scss";
+@import "assets/scss/_navigation.scss";
+@import "assets/scss/_typography.scss";
+@import "assets/scss/_cards.scss";
+@import "assets/scss/_tables.scss";
+
+/***************
+  HTML Styles
+***************/
+
+body {
+  margin: 0;
+}
+
+p.box {
+  padding: 20px;
+}
+p {
+  color: rgba(0, 0, 0, 0.71);
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  -webkit-font-smoothing: antialiased;
+}
+
+h5 > span {
+  font-size: 14px;
+  margin-left: 15px;
+  color: #777;
+}
+

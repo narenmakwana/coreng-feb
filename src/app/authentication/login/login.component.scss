@@ -1,0 +1,38 @@
+@import "../../../assets/scss/_variables.scss";
+
+#login-page {
+  height: 100vh;
+  background-size: cover;
+  background: url('/assets/images/red-pentagonal-background.png') no-repeat center center;
+}
+
+#login-logo {
+  width: 60%;
+}
+
+.bg-primary {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+.flex-align {
+  width: 30%;
+  &.align-start {
+    align-self: flex-start;
+  }
+  &.align-end {
+    align-self: flex-end;
+  }
+}
+
+.forgot-password {
+  text-align: right;
+}
+
+md-input {
+  width: 100%;
+}
+
+md-card-content > form > button[md-raised-button] {
+  width: 100%
+}

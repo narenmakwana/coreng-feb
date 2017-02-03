@@ -1,0 +1,54 @@
+<div class="flex-container layout-row layout-column-sm widgets">
+  <core-widget icon="comment" [count]="28" description="Comments" [palette]="{palette: 'pink', hue: '400'}"></core-widget>
+  <core-widget icon="thumb_up" [count]="831" description="Likes" [palette]="{palette: 'green', hue: '500'}" hexTextColor="#fff"></core-widget>
+  <core-widget icon="account_box" [count]="204" description="Sign Ups" [palette]="{palette: 'red', hue: '400'}"></core-widget>
+  <core-widget icon="credit_card" [count]="85" description="Sales" [palette]="{palette: 'blue-grey', hue: '600'}"></core-widget>
+</div>
+<div class="flex-container layout-row layout-column-sm no-wrap">
+  <md-card class="grow-3" id="server-chart">
+    <md-card-title>Server Load</md-card-title>
+    <md-card-content class="overflow-scroll">
+      <c-server-load-chart></c-server-load-chart>
+    </md-card-content>
+  </md-card>
+  <md-card class="grow-1" id="recent-commits">
+    <md-card-title>Recent Commits</md-card-title>
+    <md-card-content id="commits">
+      <md-list>
+        <md-list-item *ngFor="let commit of commits">
+          <img md-list-avatar [src]="commit.avatarUrl">
+          <h3 md-line> {{commit.author}} </h3>
+          <p md-line>
+            <span> {{commit.title}} </span>
+            <span class="detail-message"> {{commit.message}} </span>
+          </p>
+        </md-list-item>
+      </md-list>
+    </md-card-content>
+  </md-card>
+</div>
+<md-card id="contributors">
+  <md-card-title>Angular 2 Contributors</md-card-title>
+  <md-card-content>
+    <table class="table-responsive highlight">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Username</th>
+        <th>Location</th>
+        <th>Bio</th>
+        <th>Email</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let author of contributors">
+        <td><a [href]="author.url" target="_blank"><img class="circle" [src]="author.avatarUrl"></a></td>
+        <td><a [href]="author.url" target="_blank">{{author.username}}</a></td>
+        <td>{{author.location}}</td>
+        <td>{{author.bio}}</td>
+        <td>{{author.email}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>

@@ -1,0 +1,13 @@
+<md-toolbar color="primary" fxLayout="center center" fxLayout="row">
+  <div fxFlex fxFlexFill></div>
+  <!--<img fxFlex src="/assets/images/logo.png" class="logo" [fxShow]="!isHovering && (sidenavStyle === 'icon' || sidenavStyle === 'icon overlay')">-->
+  <!--<img fxFlex src="/assets/images/logo-large.png" class="logo" [fxShow]="isHovering || !(sidenavStyle === 'icon' || sidenavStyle === 'icon overlay')">-->
+  <img fxFlex src="/assets/images/logo.png" class="logo">
+  <span fxFlex [fxShow]="isHovering || !(sidenavStyle === 'icon' || sidenavStyle === 'icon overlay')">
+    {{_navigation._appTitle | async}}
+  </span>
+  <div fxFlex fxFlexFill></div>
+</md-toolbar>
+<md-nav-list class="side-navigation" [ngStyle]="{'height': height}">
+  <c-sidenav-item *ngFor="let menuItem of (menuItemsObservable | async)" [menuItem]="menuItem" [parent]="_this"></c-sidenav-item>
+</md-nav-list>

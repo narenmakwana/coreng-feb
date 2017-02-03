@@ -1,0 +1,104 @@
+<md-card>
+  <md-card-title>md-checkbox</md-card-title>
+  <md-card-content>
+    <p><code>md-checkbox</code> is a Material Design selection control that allows users to make a binary choice for
+      a predetermined conditioned. It is modeled after the browser’s native checkbox element, and behaves
+      in the same way. Similar to the native checkbox element, it supports an indeterminate state for
+      “mixed” checkboxes.</p>
+  </md-card-content>
+</md-card>
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Basic Usage</md-toolbar>
+  <md-card-content>
+    <p><code>md-checkbox</code> can be used anywhere a normal checkbox would be used, and in the same way.</p>
+    <pre><code class="language-markup" ngNonBindable>&lt;ul&gt;
+  &lt;li *ngFor=&quot;let todo of todos&quot;&gt;
+    &lt;md-checkbox [checked]=&quot;todo.completed&quot;
+                 (change)=&quot;todo.completed = $event&quot;&gt;
+      {{todo.name}}
+    &lt;/md-checkbox&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    <br/>
+    <p>Output:</p>
+    <md-checkbox>Basic Checkbox</md-checkbox>
+  </md-card-content>
+</md-card>
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Usage within Forms</md-toolbar>
+  <md-card-content>
+    <p>In addition to supporting native checkbox functionality, <code>md-checkbox</code> also supports <code>[(ngModel)]</code>
+      for use within forms.</p>
+    <pre><code class="language-markup">&lt;form (submit)=&quot;saveUser()&quot;&gt;
+  &lt;!-- Form fields... --&gt;
+  &lt;div&gt;
+    &lt;md-checkbox [(ngModel)]=&quot;user.agreesToTOS&quot;&gt;
+      I have read and agree to the terms of service.
+    &lt;/md-checkbox&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;submit&quot; [disabled]=&quot;!user.agreesToTOS&quot;&gt;Sign Up&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+  </md-card-content>
+</md-card>
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Indeterminate Checkboxes</md-toolbar>
+  <md-card-content>
+    <p>Indeterminate checkboxes are useful when a checkbox needs to be in a “mixed” state</p>
+    <pre><code class="language-markup">&lt;md-checkbox [checked]=&quot;false&quot;
+             [indeterminate]=&quot;isIndeterminate&quot;
+             (change)=&quot;isIndeterminate = false&quot;&gt;
+  Click the Button Below to Make Me Indeterminate.
+&lt;/md-checkbox&gt;
+&lt;button type=&quot;button&quot; (click)=&quot;isIndeterminate = true&quot;&gt;
+  Make Indeterminate
+&lt;/button&gt;</code></pre>
+    <br/>
+    <p>Output:</p>
+    <div class="flex-container layout-column align-start">
+      <md-checkbox [checked]="false" [indeterminate]="isIndeterminate" (change)="isIndeterminate = false">Basic Checkbox</md-checkbox>
+      <button md-raised-button color="primary" (click)="isIndeterminate = true">Make Indeterminate</button>
+    </div>
+  </md-card-content>
+</md-card>
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Alignment</md-toolbar>
+  <md-card-content>
+    <p>Note that checkboxes can be aligned to "before" or "after" its corresponding label.</p>
+    <pre><code class="language-markup">&lt;md-checkbox [checked]=&quot;true&quot; labelPosition=&quot;before&quot;&gt;
+  I come after my label.
+&lt;/md-checkbox&gt;</code></pre>
+    <p>Note that this alignment is preserved within RTL layouts.</p>
+    <br/>
+    <p>Output:</p>
+    <md-checkbox [checked]="true" labelPosition="before">
+      I come after my label.
+    </md-checkbox>
+  </md-card-content>
+</md-card>
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Accessibility</md-toolbar>
+  <md-card-content>
+    <p>By default, <code>md-checkbox</code> provides all the accessibility attributes needed. It also supports
+      keyboard navigation and toggling via the spacebar. However, you can provide an <code>aria-label</code> to the
+      checkbox if you do not wish to have any label text.</p>
+    <pre><code class="language-markup">&lt;md-checkbox [checked]=&quot;false&quot; aria-label=&quot;My standalone checkbox&quot;&gt;&lt;/md-checkbox&gt;</code></pre>
+    <br/>
+    <p>Output:</p>
+    <md-checkbox [checked]="false" aria-label="My standalone checkbox"></md-checkbox>
+  </md-card-content>
+</md-card>
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Theming</md-toolbar>
+  <md-card-content>
+    <p>The color of a <code>md-checkbox</code> can be changed by using the <code>color</code> attribute.
+      The value <code>accent</code> is default and will correspond to your theme accent color.
+      Alternatively, you can specify <code>primary</code> or <code>warn</code>.</p>
+    <p>Example:</p>
+    <pre><code class="language-markup">&lt;md-checkbox [checked]=&quot;true&quot; color=&quot;primary&quot;&gt;
+  I come after my label.
+&lt;/md-checkbox&gt;</code></pre>
+    <br/>
+    <p>Output:</p>
+    <md-checkbox [checked]="true" color="primary" labelPosition="after">I come after my label</md-checkbox>
+  </md-card-content>
+</md-card>

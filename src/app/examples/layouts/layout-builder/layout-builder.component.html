@@ -1,0 +1,31 @@
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Layout Builder</md-toolbar>
+  <md-card-content>
+    <div class="flex-container layout-column">
+      <div class="flex-item">
+        <md-input-container>
+          <input md-input placeholder="App Title" [(ngModel)]="appTitle">
+        </md-input-container>
+      </div>
+      <div class="flex-item">
+        <md-select placeholder="Opened Sidenav Style" [(ngModel)]="openSidenavStyle">
+          <md-option *ngFor="let style of sidenavStyles" [value]="style">{{style}}</md-option>
+        </md-select>
+      </div>
+      <div class="flex-item">
+        <md-select placeholder="Closed Sidenav Style" [(ngModel)]="closedSidenavStyle">
+          <md-option *ngFor="let style of sidenavStyles" [value]="style">{{style}}</md-option>
+        </md-select>
+      </div>
+      <div class="flex-item">
+        <md-slide-toggle color="primary" [(ngModel)]="sidenavOpened">Toggle Sidenav</md-slide-toggle>
+      </div>
+      <div class="flex-item">
+        <md-slide-toggle color="primary" [(ngModel)]="fixedNavbar">Toggle Fixed Navbar</md-slide-toggle>
+      </div>
+      <div class="flex-item">
+        <md-slide-toggle color="primary" [(ngModel)]="searchEnabled">Enable/Disable Navbar Search</md-slide-toggle>
+      </div>
+    </div>
+  </md-card-content>
+</md-card>

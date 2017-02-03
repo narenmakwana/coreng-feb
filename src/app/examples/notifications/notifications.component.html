@@ -1,0 +1,69 @@
+<md-card>
+  <md-card-title>MdSnackBar</md-card-title>
+  <md-card-content>
+    <p><code>MdSnackBar</code> is a service, which opens snack bar notifications in the view.</p>
+    <p>The service can be injected in a component.</p>
+    <pre><code class="language-javascript">{{exampleString}}</code></pre>
+    <p>Example:</p>
+    <div class="flex-container layout-row justify-space list-bg">
+      <button md-raised-button (click)="open()">Send Notification</button>
+    </div>
+
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Methods</md-toolbar>
+  <md-card-content>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code>open(message: string, actionLabel: string, config: MdSnackBarConfig): MdSnackBarRef&lt;SimpleSnackBar&gt;</code></td>
+        <td>Creates and opens a simple snack bar notification matching material spec.</td>
+      </tr>
+      <tr>
+        <td><code>openFromComponent(component: ComponentType&lt;T&gt;, config: MdSnackBarConfig): MdSnackBarRef&lt;T&gt;</code></td>
+        <td>Creates and opens a snack bar notification with a custom component as content.</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Config</md-toolbar>
+  <md-card-content>
+    <table>
+      <thead>
+      <tr>
+        <th>Key</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code>viewContainerRef: ViewContainerRef</code></td>
+        <td>The view container ref to attach the snack bar to.</td>
+      </tr>
+      <tr>
+        <td><code>role: AriaLivePoliteness = 'assertive'</code></td>
+        <td>The politeness level to announce the snack bar with.</td>
+      </tr>
+      <tr>
+        <td><code>announcementMessage: string</code></td>
+        <td>The message to announce with the snack bar.</td>
+      </tr>
+      <tr>
+        <td><code>duration: number</code></td>
+        <td>The length of time in milliseconds to wait before autodismissing the snack bar.</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>

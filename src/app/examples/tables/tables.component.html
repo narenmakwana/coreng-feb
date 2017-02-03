@@ -1,0 +1,430 @@
+<md-card>
+  <md-card-title>Tables</md-card-title>
+  <md-card-content>
+    <p><code>Tables</code> are a nice way to organize a lot of data. We provide a few utility classes to help you style your table as easily as possible. In addition, to improve mobile experience, all tables on mobile-screen widths are centered automatically.</p>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Borderless Table</md-toolbar>
+  <md-card-content>
+    <p>Tables are borderless by default.</p>
+    <pre><code class="language-markup">&lt;table&gt;
+            &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th data-field=&quot;id&quot;&gt;Name&lt;/th&gt;
+              &lt;th data-field=&quot;name&quot;&gt;Item Name&lt;/th&gt;
+              &lt;th data-field=&quot;price&quot;&gt;Item Price&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;/thead&gt;
+
+            &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alvin&lt;/td&gt;
+              &lt;td&gt;Eclair&lt;/td&gt;
+              &lt;td&gt;$0.87&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alan&lt;/td&gt;
+              &lt;td&gt;Jellybean&lt;/td&gt;
+              &lt;td&gt;$3.76&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Jonathan&lt;/td&gt;
+              &lt;td&gt;Lollipop&lt;/td&gt;
+              &lt;td&gt;$7.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Shannon&lt;/td&gt;
+              &lt;td&gt;KitKat&lt;/td&gt;
+              &lt;td&gt;$9.99&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+
+          &lt;/table&gt;</code></pre>
+    <p>Output:</p>
+    <table>
+      <thead>
+      <tr>
+        <th data-field="id">Name</th>
+        <th data-field="name">Item Name</th>
+        <th data-field="price">Item Price</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <td>Alvin</td>
+        <td>Eclair</td>
+        <td>$0.87</td>
+      </tr>
+      <tr>
+        <td>Alan</td>
+        <td>Jellybean</td>
+        <td>$3.76</td>
+      </tr>
+      <tr>
+        <td>Jonathan</td>
+        <td>Lollipop</td>
+        <td>$7.00</td>
+      </tr>
+      <tr>
+        <td>Shannon</td>
+        <td>KitKat</td>
+        <td>$9.99</td>
+      </tr>
+      </tbody>
+
+    </table>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Bordered Table</md-toolbar>
+  <md-card-content>
+    <p>Add <code class="language-markup">class="bordered"</code> to the table tag for a bordered table</p>
+    <pre><code class="language-markup">&lt;table class=&quot;bordered&quot;&gt;
+            &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th data-field=&quot;id&quot;&gt;Name&lt;/th&gt;
+              &lt;th data-field=&quot;name&quot;&gt;Item Name&lt;/th&gt;
+              &lt;th data-field=&quot;price&quot;&gt;Item Price&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alvin&lt;/td&gt;
+              &lt;td&gt;Eclair&lt;/td&gt;
+              &lt;td&gt;$0.87&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alan&lt;/td&gt;
+              &lt;td&gt;Jellybean&lt;/td&gt;
+              &lt;td&gt;$3.76&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Jonathan&lt;/td&gt;
+              &lt;td&gt;Lollipop&lt;/td&gt;
+              &lt;td&gt;$7.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Shannon&lt;/td&gt;
+              &lt;td&gt;KitKat&lt;/td&gt;
+              &lt;td&gt;$9.99&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;</code></pre>
+    <p>Output:</p>
+    <table class="bordered">
+      <thead>
+      <tr>
+        <th data-field="id">Name</th>
+        <th data-field="name">Item Name</th>
+        <th data-field="price">Item Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Alvin</td>
+        <td>Eclair</td>
+        <td>$0.87</td>
+      </tr>
+      <tr>
+        <td>Alan</td>
+        <td>Jellybean</td>
+        <td>$3.76</td>
+      </tr>
+      <tr>
+        <td>Jonathan</td>
+        <td>Lollipop</td>
+        <td>$7.00</td>
+      </tr>
+      <tr>
+        <td>Shannon</td>
+        <td>KitKat</td>
+        <td>$9.99</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Striped Table</md-toolbar>
+  <md-card-content>
+    <p>Add <code class="language-markup">class="striped"</code> to the table tag for a striped table</p>
+    <pre><code class="language-markup">&lt;table class=&quot;striped&quot;&gt;
+            &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th data-field=&quot;id&quot;&gt;Name&lt;/th&gt;
+              &lt;th data-field=&quot;name&quot;&gt;Item Name&lt;/th&gt;
+              &lt;th data-field=&quot;price&quot;&gt;Item Price&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alvin&lt;/td&gt;
+              &lt;td&gt;Eclair&lt;/td&gt;
+              &lt;td&gt;$0.87&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alan&lt;/td&gt;
+              &lt;td&gt;Jellybean&lt;/td&gt;
+              &lt;td&gt;$3.76&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Jonathan&lt;/td&gt;
+              &lt;td&gt;Lollipop&lt;/td&gt;
+              &lt;td&gt;$7.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Shannon&lt;/td&gt;
+              &lt;td&gt;KitKat&lt;/td&gt;
+              &lt;td&gt;$9.99&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;</code></pre>
+    <p>Output:</p>
+    <table class="striped">
+      <thead>
+      <tr>
+        <th data-field="id">Name</th>
+        <th data-field="name">Item Name</th>
+        <th data-field="price">Item Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Alvin</td>
+        <td>Eclair</td>
+        <td>$0.87</td>
+      </tr>
+      <tr>
+        <td>Alan</td>
+        <td>Jellybean</td>
+        <td>$3.76</td>
+      </tr>
+      <tr>
+        <td>Jonathan</td>
+        <td>Lollipop</td>
+        <td>$7.00</td>
+      </tr>
+      <tr>
+        <td>Shannon</td>
+        <td>KitKat</td>
+        <td>$9.99</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Highlight Table</md-toolbar>
+  <md-card-content>
+    <p>Add <code class="language-markup">class="highlight"</code> to the table tag for a highlight table</p>
+    <pre><code class="language-markup">&lt;table class=&quot;highlight&quot;&gt;
+            &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th data-field=&quot;id&quot;&gt;Name&lt;/th&gt;
+              &lt;th data-field=&quot;name&quot;&gt;Item Name&lt;/th&gt;
+              &lt;th data-field=&quot;price&quot;&gt;Item Price&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alvin&lt;/td&gt;
+              &lt;td&gt;Eclair&lt;/td&gt;
+              &lt;td&gt;$0.87&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alan&lt;/td&gt;
+              &lt;td&gt;Jellybean&lt;/td&gt;
+              &lt;td&gt;$3.76&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Jonathan&lt;/td&gt;
+              &lt;td&gt;Lollipop&lt;/td&gt;
+              &lt;td&gt;$7.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Shannon&lt;/td&gt;
+              &lt;td&gt;KitKat&lt;/td&gt;
+              &lt;td&gt;$9.99&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;</code></pre>
+    <p>Output:</p>
+    <table class="highlight">
+      <thead>
+      <tr>
+        <th data-field="id">Name</th>
+        <th data-field="name">Item Name</th>
+        <th data-field="price">Item Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Alvin</td>
+        <td>Eclair</td>
+        <td>$0.87</td>
+      </tr>
+      <tr>
+        <td>Alan</td>
+        <td>Jellybean</td>
+        <td>$3.76</td>
+      </tr>
+      <tr>
+        <td>Jonathan</td>
+        <td>Lollipop</td>
+        <td>$7.00</td>
+      </tr>
+      <tr>
+        <td>Shannon</td>
+        <td>KitKat</td>
+        <td>$9.99</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Centered Table</md-toolbar>
+  <md-card-content>
+    <p>Add <code class="language-markup">class="centered"</code> to the table tag to center align all the text in the table</p>
+    <pre><code class="language-markup">&lt;table class=&quot;centered&quot;&gt;
+            &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th data-field=&quot;id&quot;&gt;Name&lt;/th&gt;
+              &lt;th data-field=&quot;name&quot;&gt;Item Name&lt;/th&gt;
+              &lt;th data-field=&quot;price&quot;&gt;Item Price&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alvin&lt;/td&gt;
+              &lt;td&gt;Eclair&lt;/td&gt;
+              &lt;td&gt;$0.87&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alan&lt;/td&gt;
+              &lt;td&gt;Jellybean&lt;/td&gt;
+              &lt;td&gt;$3.76&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Jonathan&lt;/td&gt;
+              &lt;td&gt;Lollipop&lt;/td&gt;
+              &lt;td&gt;$7.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Shannon&lt;/td&gt;
+              &lt;td&gt;KitKat&lt;/td&gt;
+              &lt;td&gt;$9.99&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;</code></pre>
+    <p>Output:</p>
+    <table class="centered">
+      <thead>
+      <tr>
+        <th data-field="id">Name</th>
+        <th data-field="name">Item Name</th>
+        <th data-field="price">Item Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Alvin</td>
+        <td>Eclair</td>
+        <td>$0.87</td>
+      </tr>
+      <tr>
+        <td>Alan</td>
+        <td>Jellybean</td>
+        <td>$3.76</td>
+      </tr>
+      <tr>
+        <td>Jonathan</td>
+        <td>Lollipop</td>
+        <td>$7.00</td>
+      </tr>
+      <tr>
+        <td>Shannon</td>
+        <td>KitKat</td>
+        <td>$9.99</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Responsive Table</md-toolbar>
+  <md-card-content>
+    <p>Add <code class="language-markup">class="responsive-table"</code> to the table tag to make the table horizontally scrollable on smaller screen widths.</p>
+    <pre><code class="language-markup">&lt;table class=&quot;responsive-table&quot;&gt;
+            &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th data-field=&quot;id&quot;&gt;Name&lt;/th&gt;
+              &lt;th data-field=&quot;name&quot;&gt;Item Name&lt;/th&gt;
+              &lt;th data-field=&quot;price&quot;&gt;Item Price&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alvin&lt;/td&gt;
+              &lt;td&gt;Eclair&lt;/td&gt;
+              &lt;td&gt;$0.87&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Alan&lt;/td&gt;
+              &lt;td&gt;Jellybean&lt;/td&gt;
+              &lt;td&gt;$3.76&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Jonathan&lt;/td&gt;
+              &lt;td&gt;Lollipop&lt;/td&gt;
+              &lt;td&gt;$7.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Shannon&lt;/td&gt;
+              &lt;td&gt;KitKat&lt;/td&gt;
+              &lt;td&gt;$9.99&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;</code></pre>
+    <p>Output:</p>
+    <table class="responsive-table">
+      <thead>
+      <tr>
+        <th data-field="id">Name</th>
+        <th data-field="name">Item Name</th>
+        <th data-field="price">Item Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Alvin</td>
+        <td>Eclair</td>
+        <td>$0.87</td>
+      </tr>
+      <tr>
+        <td>Alan</td>
+        <td>Jellybean</td>
+        <td>$3.76</td>
+      </tr>
+      <tr>
+        <td>Jonathan</td>
+        <td>Lollipop</td>
+        <td>$7.00</td>
+      </tr>
+      <tr>
+        <td>Shannon</td>
+        <td>KitKat</td>
+        <td>$9.99</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>

@@ -1,0 +1,131 @@
+<md-card>
+  <md-card-title>md-progress</md-card-title>
+  <md-card-content>
+    <p><code>md-progress-bar</code> and <code>md-progress-spinner</code> are components for indicating progress and activity, matching the spec of <a href="https://www.google.com/design/spec/components/progress-activity.html">Material Design Progress & Activity</a></p>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Progress Modes</md-toolbar>
+  <md-card-content>
+    <p>There are four modes for <code>md-progress-bar</code>:</p>
+    <ol>
+      <li>Determinate - <code>&lt;md-progress-bar mode=&quot;determinate&quot;&gt;</code>
+        <ul>
+          <li>Indicates how long an operation will take when the percentage complete is detectable.</li>
+        </ul>
+      </li>
+      <li>Indeterminate - <code>&lt;md-progress-bar mode=&quot;indeterminate&quot;&gt;</code>
+        <ul>
+          <li>Indicates the user must wait while something finishes when it’s not necessary or possible to indicate how long it will take.</li>
+        </ul>
+      </li>
+      <li>Buffer - <code>&lt;md-progress-bar mode=&quot;buffer&quot;&gt;</code>
+        <ul>
+          <li>Indicates how long an operation will take when the percentage complete is detectable, also provides a value of the preloading for the operation.</li>
+        </ul>
+      </li>
+      <li>Query - <code>&lt;md-progress-bar mode=&quot;query&quot;&gt;</code>
+        <ul>
+          <li>Indicates the user must wait while something finishes when it is not yet possible to indicate how long it will take, but will be possible. Once possible, the progress mode should be moved to buffer or determinate.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <pre><code class="language-markup">&lt;md-progress-bar mode=&quot;determinate&quot; [value]=&quot;myValue&quot;&gt;&lt;/md-progress-bar&gt;
+&lt;md-progress-bar mode=&quot;indeterminate&quot;&gt;&lt;/md-progress-bar&gt;
+&lt;md-progress-bar mode=&quot;buffer&quot; [value]=&quot;myValueBuffer&quot; bufferValue=&quot;[myBufferValue]&quot;&gt;&lt;/md-progress-bar&gt;
+&lt;md-progress-bar mode=&quot;query&quot;&gt;&lt;/md-progress-bar&gt;</code></pre>
+
+    <div class="flex-container layout-column">
+      <md-progress-bar mode="determinate" [value]="myValue"></md-progress-bar>
+      <md-progress-bar mode="indeterminate"></md-progress-bar>
+      <md-progress-bar mode="buffer" [value]="myValueBuffer" [bufferValue]="myBufferValue"></md-progress-bar>
+      <md-progress-bar mode="query"></md-progress-bar>
+    </div>
+
+    <p>There are two modes for <code>md-progress-spinner</code>:</p>
+    <ol>
+      <li>Determinate - <code>&lt;md-progress-spinner mode=&quot;determinate&quot;&gt;</code>
+        <ul>
+          <li>Indicates how long an operation will take when the percentage complete is detectable.</li>
+        </ul>
+      </li>
+      <li>Indeterminate - <code>&lt;md-progress-spinner mode=&quot;indeterminate&quot;&gt;</code>
+        <ul>
+          <li>Indicates the user must wait while something finishes when it’s not necessary or possible to indicate how long it will take.</li>
+        </ul>
+      </li>
+    </ol>
+    <pre><code class="language-markup">&lt;md-progress-spinner mode=&quot;determinate&quot; [value]=&quot;myValue&quot;&gt;&lt;/md-progress-spinner&gt;
+&lt;md-progress-spinner mode=&quot;indeterminate&quot;&gt;&lt;/md-progress-spinner&gt;
+&lt;md-spinner&gt;&lt;/md-spinner&gt;</code></pre>
+
+    <div class="flex-container layout-row">
+      <md-progress-spinner mode="determinate" [value]="myValue"></md-progress-spinner>
+      <md-progress-spinner mode="indeterminate"></md-progress-spinner>
+      <md-spinner></md-spinner>
+    </div>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Theming</md-toolbar>
+  <md-card-content>
+    <p>All progress indicators can be themed to match your “primary” palette, your “accent” palette, or your “warn” palette using the appropriate class.</p>
+    <pre><code class="language-markup">&lt;md-progress-bar mode=&quot;indeterminate&quot; color=&quot;primary&quot;&gt;&lt;/md-progress-bar&gt;
+&lt;md-progress-bar mode=&quot;indeterminate&quot; color=&quot;accent&quot;&gt;&lt;/md-progress-bar&gt;
+&lt;md-progress-bar mode=&quot;indeterminate&quot; color=&quot;warn&quot;&gt;&lt;/md-progress-bar&gt;</code></pre>
+    <div class="flex-container layout-column">
+      <md-progress-bar mode="indeterminate" color="primary"></md-progress-bar>
+      <md-progress-bar mode="indeterminate" color="accent"></md-progress-bar>
+      <md-progress-bar mode="indeterminate" color="warn"></md-progress-bar>
+    </div>
+    <pre><code class="language-markup">&lt;md-progress-spinner mode=&quot;indeterminate&quot; color=&quot;primary&quot;&gt;&lt;/md-progress-spinner&gt;
+&lt;md-progress-spinner mode=&quot;indeterminate&quot; color=&quot;accent&quot;&gt;&lt;/md-progress-spinner&gt;
+&lt;md-progress-spinner mode=&quot;indeterminate&quot; color=&quot;warn&quot;&gt;&lt;/md-progress-spinner&gt;</code></pre>
+    <div class="flex-container layout-row">
+      <md-progress-spinner mode="indeterminate" color="primary"></md-progress-spinner>
+      <md-progress-spinner mode="indeterminate" color="accent"></md-progress-spinner>
+      <md-progress-spinner mode="indeterminate" color="warn"></md-progress-spinner>
+    </div>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">API Summary</md-toolbar>
+  <md-card-content>
+    <p>Properties:</p>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code>color</code></td>
+        <td><code>&quot;primary&quot; | &quot;accent&quot; | &quot;warn&quot;</code></td>
+        <td>The color palette of the progress indicator</td>
+      </tr>
+      <tr>
+        <td><code>mode</code></td>
+        <td><code>&quot;determinate&quot; | &quot;indeterminate&quot; | &quot;buffer&quot; | &quot;query&quot;</code></td>
+        <td>The mode of the progress indicator</td>
+      </tr>
+      <tr>
+        <td><code>value</code></td>
+        <td>number</td>
+        <td>The current progress percentage for determinate indicators</td>
+      </tr>
+      <tr>
+        <td><code>bufferValue</code></td>
+        <td>number</td>
+        <td>The current progress percentage for buffer secondary indicators</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>

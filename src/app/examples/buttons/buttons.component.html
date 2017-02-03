@@ -1,0 +1,173 @@
+<md-card>
+  <md-card-title>md-button</md-card-title>
+  <md-card-content>
+    <p><code class="language-markup">md-button</code> is an HTML <code class="language-markup">&lt;button&gt;</code> or <code class="language-markup">&lt;a&gt;</code> tag enhanced with styling and animation to match the<br/>
+      <a href="https://www.google.com/design/spec/components/buttons.html">Material Design button spec</a>.</p>
+    <p>Users should employ a button element (<code class="language-markup">&lt;button&gt;</code>) when clicking triggers some action in the current<br/>
+      view <em>without navigating</em>. An anchor element (<code class="language-markup">&lt;a&gt;</code>) should be used when clicking <em>navigates</em><br/>
+      the user to another URL. Depending on which element is used, the component will either be an<br/>
+      instance of <code class="language-markup">MdButton</code> or <code class="language-markup">MdAnchor</code>. Visually, the two are identical.</p>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Button types</md-toolbar>
+  <md-card-content>
+    <p>There are five types of buttons:</p>
+    <ol>
+      <li>Flat buttons - <code class="language-markup">md-button</code>
+        <ul>
+          <li>Rectangular button</li>
+          <li>Defaults to white background</li>
+          <li>No box shadow</li>
+        </ul>
+      </li>
+      <li>Raised buttons - <code class="language-markup">md-raised-button</code>
+        <ul>
+          <li>Rectangular button</li>
+          <li>Defaults to white background</li>
+          <li>Box shadow applied</li>
+        </ul>
+      </li>
+      <li>Icon buttons - <code class="language-markup">md-icon-button</code>
+        <ul>
+          <li>Circular button</li>
+          <li>Transparent background</li>
+          <li>40 by 40 px</li>
+        </ul>
+      </li>
+      <li>Floating Action Buttons (FABs) - <code class="language-markup">md-fab</code>
+        <ul>
+          <li>Circular button</li>
+          <li>Defaults background to “accent” palette defined in theme</li>
+          <li>Box shadow applied</li>
+          <li>56 by 56 px</li>
+        </ul>
+      </li>
+      <li>Mini Floating Action Buttons (Mini FABs) - <code class="language-markup">md-mini-fab</code>
+        <ul>
+          <li>Circular button</li>
+          <li>Defaults background to “accent” palette defined in theme</li>
+          <li>Box shadow applied</li>
+          <li>40 by 40 px</li>
+        </ul>
+      </li>
+    </ol>
+    <p>Each is an attribute directive that you can add to a <code class="language-markup">button</code> or <code class="language-markup">a</code> tag. You can provide custom content to the button by inserting it<br/>
+      between the tags, as you would with a normal button.</p>
+    <p>Example:</p>
+    <pre><code class="language-markup">
+&lt;button md-button&gt;FLAT&lt;/button&gt;
+&lt;button md-raised-button&gt;RAISED&lt;/button&gt;
+&lt;button md-icon-button&gt; &lt;md-icon class=&quot;md-24&quot;&gt;favorite&lt;/md-icon&gt; &lt;/button&gt;
+&lt;button md-fab&gt; &lt;md-icon class=&quot;md-24&quot;&gt;add&lt;/md-icon&gt;&lt;/button&gt;
+&lt;button md-mini-fab&gt; &lt;md-icon class=&quot;md-24&quot;&gt;add&lt;/md-icon&gt; &lt;/button&gt;</code></pre>
+    <p>Output:</p>
+    <div class="flex-container layout-row">
+      <button md-button>FLAT</button>
+      <button md-raised-button>RAISED</button>
+      <button md-icon-button>
+        <md-icon class="md-24">favorite</md-icon>
+      </button>
+      <button md-fab>
+        <md-icon class="md-24">add</md-icon>
+      </button>
+      <button md-mini-fab>
+        <md-icon class="md-24">add</md-icon>
+      </button>
+    </div>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Theming</md-toolbar>
+  <md-card-content>
+    <p>All button types can be themed to match your “primary” palette, your “accent” palette, or your “warn” palette using the <code class="language-markup">color</code> attribute.<br/>
+      Simply pass in the palette name.</p>
+    <p>In flat buttons, the palette chosen will affect the text color, while in other buttons, it affects the background.</p>
+    <p>Example:</p>
+    <pre><code class="language-markup">
+&lt;button md-raised-button color=&quot;primary&quot;&gt;PRIMARY&lt;/button&gt;
+&lt;button md-raised-button color=&quot;accent&quot;&gt;ACCENT&lt;/button&gt;
+&lt;button md-raised-button color=&quot;warn&quot;&gt;WARN&lt;/button&gt;</code></pre>
+    <p>Output:</p>
+    <div class="flex-container layout-row">
+      <button md-raised-button color="primary">PRIMARY</button>
+      <button md-raised-button color="accent">ACCENT</button>
+      <button md-raised-button color="warn">WARN</button>
+    </div>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Disabling</md-toolbar>
+  <md-card-content>
+    <p>You can disable any button type through the native <code class="language-markup">disabled</code> property. You can add it directly, or bind it to a property on your<br/>
+      component class by adding <code class="language-markup">[disabled]=&quot;isDisabled&quot;</code> given that the <code class="language-markup">isDisabled</code><br/>
+      property exists.</p>
+    <pre><code class="language-markup">
+&lt;button md-button disabled&gt;OFF&lt;/button&gt;
+&lt;button md-raised-button [disabled]=&quot;isDisabled&quot;&gt;OFF&lt;/button&gt;
+&lt;button md-mini-fab [disabled]=&quot;isDisabled&quot;&gt;&lt;md-icon&gt;check&lt;/md-icon&gt;&lt;/button&gt;
+    </code></pre>
+    <p>Output:</p>
+    <div class="flex-container layout-row">
+      <button md-button disabled>OFF</button>
+      <button md-raised-button [disabled]="true">OFF</button>
+      <button md-mini-fab [disabled]="true">
+        <md-icon>check</md-icon>
+      </button>
+    </div>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Accessibility</md-toolbar>
+  <md-card-content>
+    <ul>
+      <li>In high contrast mode, a strong border is added to the button to make it easier to see.</li>
+      <li>Button focus events originating from the keyboard will retain focus styles, while button focus events from the mouse will not.</li>
+      <li>As <code class="language-markup">md-button</code> is added to an existing <code class="language-markup">button</code> or <code class="language-markup">a</code> tag, it enjoys all the accessibility natively built into these elements.</li>
+    </ul>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">Upcoming work</md-toolbar>
+  <md-card-content>
+    <p>We will also be adding ink ripples to buttons in an upcoming milestone.</p>
+  </md-card-content>
+</md-card>
+
+<md-card class="card-toolbar">
+  <md-toolbar color="primary">API Summary</md-toolbar>
+  <md-card-content>
+    <p>Properties:</p>
+    <table>
+      <thead>
+      <tr class="header">
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+        <td><code class="language-markup">color</code></td>
+        <td><code class="language-markup">&quot;primary&quot;|&quot;accent&quot;|&quot;warn&quot;</code></td>
+        <td>The color palette of the button</td>
+      </tr>
+      <tr class="even">
+        <td><code class="language-markup">disabled</code></td>
+        <td>boolean</td>
+        <td>Whether or not the button is disabled</td>
+      </tr>
+      <tr class="odd">
+        <td><code class="language-markup">disableRipple</code></td>
+        <td>boolean</td>
+        <td>Whether the ripple effect when the button is clicked should be disabled</td>
+      </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>

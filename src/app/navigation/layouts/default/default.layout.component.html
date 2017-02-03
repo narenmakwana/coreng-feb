@@ -1,0 +1,20 @@
+<md-sidenav-container>
+  <md-sidenav (mouseover)="toggleHover(true)" (mouseout)="toggleHover(false)" (close)="sidenavToggle(false)" (open)="sidenavToggle(true)"
+              [mode]="(_navigation.mediumScreenAndDown && sidenavStyle !== 'off') ? 'over' : sidenavMode"
+              [ngClass]="{'icon-sidenav': ((sidenavStyle === 'icon' || sidenavStyle === 'icon overlay') && _navigation.largeScreen), 'over': (sidenavStyle === 'icon overlay')}">
+    <app-sidenav [isHovering]="isHovering"></app-sidenav>
+  </md-sidenav>
+  <header [ngClass]="{'icon-sidenav-opened' : ((isHovering || (!isHovering && _isHoveringNew)) && _navigation.largeScreen && sidenavStyle === 'icon overlay')}">
+    <app-topnav></app-topnav>
+  </header>
+
+  <main [ngClass]="{'fixed-header' : (_navigation.fixedNavbar | async), 'icon-sidenav-opened' : ((isHovering || (!isHovering && _isHoveringNew)) && _navigation.largeScreen && sidenavStyle === 'icon overlay')}">
+    <div class="container">
+      <router-outlet></router-outlet>
+      <div class="clearfix"></div>
+    </div>
+  </main>
+  <footer>
+    <c-footer></c-footer>
+  </footer>
+</md-sidenav-container>
